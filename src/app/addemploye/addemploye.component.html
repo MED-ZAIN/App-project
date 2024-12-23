@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <h2>Ajouter un Employé</h2>
+    
+  
+    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" class="form-control" [(ngModel)]="employee.nom" name="nom" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="age">Âge</label>
+        <input type="number" id="age" class="form-control" [(ngModel)]="employee.age" name="age" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary mt-3" [disabled]="!employeeForm.form.valid">Ajouter</button>
+    </form>
+  </div>
+  
